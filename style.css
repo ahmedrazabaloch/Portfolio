@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+:root {
+  --boxColor: #05386b;
+  --bgColor: #5cdb95;
+  --fontColor: #edf5e1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--boxColor);
+  font-family: "Roboto", sans-serif;
+}
+#main_Container {
+  background-color: var(--bgColor);
+  width: 1350px;
+  padding: 0px 50px;
+  margin: auto;
+}
+.icons,
+.logo,
+.about_Section {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar {
+  align-items: center;
+  display: flex;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  letter-spacing: 2px;
+  user-select: none;
+}
+.logo span {
+  color: var(--fontColor) !important;
+}
+.navbar .about_Section {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-square-github {
+  font-size: 2em;
+  transition: all 0.3s linear;
+}
+.fa-square-github:hover {
+  color: var(--fontColor);
+}
+
+/* <!-- <<<<<< Nav_Button>>>>>> --> */
+.navBtn {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 1em;
+  border: none;
+  position: relative;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1); */
+  color: var(--boxColor);
+  transition: 0.3s ease all;
+  z-index: 1;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navBtn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: var(--boxColor);
+  z-index: -1;
+}
+
+.navBtn:hover,
+.navBtn:focus {
+  color: var(--fontColor);
+}
+
+.navBtn:hover:before,
+.navBtn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.navBtn:active {
+  transform: scale(0.9);
+}
