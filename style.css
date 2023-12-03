@@ -109,6 +109,35 @@
   font-size: 2em;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  user-select: none;
+}
+.header_left,
+.header_right {
+  width: 48%;
+}
+.header_left > h1 {
+  font-size: 4em;
+  text-align: center;
+}
+.header_left > p {
+  text-align: justify;
+  font-size: 1.6em;
+  padding-top: 20px;
+}
+.header_left > p .white {
+  font-weight: 500;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.6);
+}
+.header_right > img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .about_Section {
     visibility: hidden;
